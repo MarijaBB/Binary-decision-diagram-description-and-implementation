@@ -4,7 +4,7 @@ Program se na Windows-u pokreće sa python main.py.
 
 Na Linux-u sa python3 main.py.
 
-Svoj input možete testirati u samom main-u. Možete dodati još atoma, ali koristiti samo slovo p.
+Svoj input možete testirati u samom main-u. Možete dodati još atoma pozivom metoda add_new_variable.
 
 Na primer:<br>
 p5 = add_new_variable(5)<br>
