@@ -18,9 +18,7 @@ def solver_rec(tree: Optional[BDD]):
     return high_result or low_result
 
 def SAT_solver(tree: Optional[BDD]) -> bool:
-    if tree is None:
-        return False
-    if tree == bdd_false():
+    if tree is None or tree == bdd_false():
         return False
     return solver_rec(tree)
 
@@ -51,9 +49,7 @@ def find_valuations(tree: Optional[BDD], valuations: Dict[int, bool]) -> Optiona
     return None
 
 def SAT_valuations(tree: Optional[BDD]) -> Optional[Dict[int, bool]]:
-    if tree is None:
+    if tree is None or tree == bdd_false():
         return None
-    if tree == bdd_false():
-        return None 
     return find_valuations(tree, {})  
 
